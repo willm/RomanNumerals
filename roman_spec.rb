@@ -55,4 +55,9 @@ describe Roman, do
     roman = Roman.new
     roman.parse(10).should eq('X')
   end
+  
+  it "returns XI for 11" do
+    roman = Roman.new
+    roman.parse(11).should eq('XI')
+  end
 end
