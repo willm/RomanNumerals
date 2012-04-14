@@ -36,4 +36,23 @@ describe Roman, do
     roman.parse(6).should eq('VI')
   end
   
+  it "returns VII for 7" do
+    roman = Roman.new
+    roman.parse(7).should eq('VII')
+  end
+  
+  it "returns VIII for 8" do
+    roman = Roman.new
+    roman.parse(8).should eq('VIII')
+  end
+  
+  it "returns IX for 9" do
+    roman = Roman.new
+    roman.parse(9).should eq('IX')
+  end
+  
+  it "returns X for 10" do
+    roman = Roman.new
+    roman.parse(10).should eq('X')
+  end
 end
