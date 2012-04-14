@@ -30,4 +30,10 @@ describe Roman, do
     roman = Roman.new
     roman.parse(5).should eq('V')
   end
+  
+  it "returns VI for 6" do
+    roman = Roman.new
+    roman.parse(6).should eq('VI')
+  end
+  
 end
