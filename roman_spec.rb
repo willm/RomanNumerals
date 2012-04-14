@@ -25,4 +25,9 @@ describe Roman, do
     roman = Roman.new
     roman.parse(4).should eq('IV')
   end
+  
+  it "returns V for 5" do
+    roman = Roman.new
+    roman.parse(5).should eq('V')
+  end
 end
