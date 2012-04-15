@@ -41,6 +41,10 @@ class NumberParser
     elsif number >= @lowestNumber
       number_as_roman = @baseLetter
       number -= @lowestNumber + 1
+      if(number >= 4)
+        number_as_roman += NumberParser.new('V', 4).parse(number)
+        number -= number
+      end
       number_as_roman += IParser.new().parse(number)
     end
     number_as_roman

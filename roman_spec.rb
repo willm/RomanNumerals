@@ -60,4 +60,10 @@ describe Roman, do
     roman = Roman.new
     roman.parse(11).should eq('XI')
   end
+  
+  it "returns XIV for 14" do
+    roman = Roman.new
+    roman.parse(14).should eq('XIV')
+  end
+  
 end
