@@ -1,3 +1,5 @@
+require_relative 'numberParser'
+
 class Roman
   def initialize
     @number
@@ -30,25 +32,4 @@ class IParser
   end
 end
 
-class NumberParser
-  def initialize (baseLetter, lowest_number)
-    @lowestNumber = lowest_number
-    @baseLetter = baseLetter
-  end
-  
-  def parse (number)
-    number_as_roman = ''
-    if number == @lowestNumber
-      number_as_roman = 'I' + @baseLetter.to_s
-    elsif number >= @lowestNumber
-      number_as_roman = @baseLetter
-      number -= @lowestNumber + 1
-      if(number >= 4)
-        number_as_roman += NumberParser.new('V', 4).parse(number)
-        number -= number
-      end
-      number_as_roman += IParser.new().parse(number)
-    end
-    number_as_roman
-  end
-end
+
