@@ -6,7 +6,9 @@ class Roman
   def parse (number)
     @number = number
     number_as_roman = ''
-    if @number >= 9
+    if @number == 50
+      number_as_roman = 'L'
+    elsif @number >= 9
       number_as_roman = NumberParser.new('X', 9).parse(@number)
     elsif @number >= 4
       number_as_roman = NumberParser.new('V', 4).parse(@number)
