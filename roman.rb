@@ -2,6 +2,7 @@ require_relative 'numberParser'
 
 class Roman
   def initialize
+    puts 'your mum'
     @number
   end
 
@@ -10,15 +11,11 @@ class Roman
     number_as_roman = ''
     if @number == 50
       number_as_roman = 'L'
-    elsif @number >= 9
-      number_as_roman = NumberParser.new('X', 9).parse(@number)
-    elsif @number >= 4
-      number_as_roman = NumberParser.new('V', 4).parse(@number)
+      @number -= 50
     end
-    if @number < 4
-      number_as_roman = IParser.new().parse (@number)
-    end
-      number_as_roman
+    number_as_roman += NumberParser.new('X', 9).parse(@number)[:number_as_roman]
+    @number -= NumberParser.new('X', 9).parse(@number)[:currentNumber]
+    number_as_roman
   end
 end
  
@@ -31,5 +28,3 @@ class IParser
     number_as_roman
   end
 end
-
-
