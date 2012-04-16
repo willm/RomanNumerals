@@ -81,6 +81,16 @@ describe Roman, do
     roman.parse(20).should eq('XX')
   end
   
+  it "returns XIV for 14" do
+    roman = Roman.new
+    roman.parse(14).should eq('XIV')
+  end
+  
+  it "returns XXIX for 29" do
+    roman = Roman.new
+    roman.parse(29).should eq('XXIX')
+  end
+  
   it "returns L for 50" do
     roman = Roman.new
     roman.parse(50).should eq('L')
