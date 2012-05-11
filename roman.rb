@@ -1,18 +1,14 @@
-require_relative 'numberParser'
+require_relative 'numberParser.rb'
 
 class Roman
   def initialize
     @number
-    @number_parser = NumberParser.new('X', 9)
+    @number_parser = NumberParser.new('C', 90, 'X', 10)
   end
 
   def parse (number)
     @number = number
     number_as_roman = ''
-    if @number == 50
-      number_as_roman = 'L'
-      @number -= 50
-    end
     result = @number_parser.parse(@number)
     number_as_roman += result[:number_as_roman]
     @number -= result[:currentNumber]
