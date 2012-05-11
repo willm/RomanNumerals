@@ -5,7 +5,7 @@ RSpec.configure do |config|
 end
 
 
-describe Roman, do
+describe Roman, 'Roman' do
   it "returns I for 1" do
     roman = Roman.new
     roman.parse(1).should eq('I')
