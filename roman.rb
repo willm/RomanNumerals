@@ -1,9 +1,10 @@
+#require 'numberParser.rb'
 require_relative 'numberParser.rb'
 
 class Roman
   def initialize
     @number
-    @number_parser = NumberParser.new('C', 90, 'X', 10)
+    @number_parser = NumberParser.new()
   end
 
   def parse (number)

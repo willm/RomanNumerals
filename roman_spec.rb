@@ -1,4 +1,5 @@
-require_relative 'roman'
+#require 'roman.rb'
+require_relative 'roman.rb'
 
 RSpec.configure do |config|
   config.color_enabled = true
@@ -66,10 +67,6 @@ describe Roman, 'Roman' do
   
   it "returns XX for 20" do
     roman.parse(20).should eq('XX')
-  end
-  
-  it "returns XIV for 14" do
-    roman.parse(14).should eq('XIV')
   end
   
   it "returns XXIX for 29" do
